@@ -3,55 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
     <title>0/1 Knapsack Problem Solver</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-</head>
-<body>
-    <h1 class="title">0/1 Knapsack Problem Solver</h1>
 
-    <div class="input-section">
-        <div class="form-group">
-            <label for="maxWeight">Maximum Knapsack Capacity (Max Weight):</label>
-            <input type="number" id="maxWeight" min="1" placeholder="Enter the Max Weight">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans p-6">
+    <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">0/1 Knapsack Problem Solver</h1>
+
+    <div class="input-section bg-white p-6 rounded-2xl shadow-lg max-w-3xl mx-auto space-y-6">
+        <div>
+            <label for="maxWeight" class="block text-lg font-medium mb-2">Maximum Knapsack Capacity (Max Weight):</label>
+            <input type="number" id="maxWeight" min="1" value="" placeholder="Enter the Max Weight "
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200">
         </div>
 
-        <div class="form-group">
-            <label for="itemCount">Number of Items:</label>
-            <div class="flex-group">
-                <input type="number" id="itemCount" min="1" placeholder="Enter Number of Items">
-                <button id="generateItems">Generate Items</button>
+        <div>
+            <label for="itemCount" class="block text-lg font-medium mb-2">Number of Items:</label>
+            <div class="flex gap-4">
+                <input type="number" id="itemCount" min="1" value="" placeholder="Enter Number of Item"
+                    class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200">
+                <button id="generateItems"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-md">Generate Items</button>
             </div>
         </div>
 
-        <div id="itemsContainer" class="items-container">
+        <div class="items-container space-y-4" id="itemsContainer">
             <!-- Items will be generated here -->
         </div>
 
-        <button id="calculate">Calculate Optimal Solution</button>
+        <button id="calculate"
+            class="w-full bg-green-600 text-white py-3 text-lg rounded-xl hover:bg-green-700 transition-all duration-200 shadow-md">
+            Calculate Optimal Solution
+        </button>
     </div>
 
-    <div id="result" class="result-section" style="display: none;">
-        <h2 class="result-title">Solution</h2>
-        <div id="solutionText" class="solution-text"></div>
+    <div class="result mt-10 max-w-4xl mx-auto bg-white p-6 rounded-2xl shadow-xl" id="result" style="display: none;">
+        <h2 class="text-2xl font-semibold text-center text-green-700 mb-4">Solution</h2>
+        <div id="solutionText" class="mb-4 text-gray-700 text-center text-lg font-medium"></div>
 
-        <table id="solutionTable">
-            <thead>
+        <table id="solutionTable" class="w-full table-auto border border-gray-200 rounded-lg overflow-hidden">
+            <thead class="bg-gray-100 text-left">
                 <tr>
-                    <th>Item</th>
-                    <th>Value</th>
-                    <th>Weight</th>
-                    <th>Included</th>
+                    <th class="px-4 py-2 border">Item</th>
+                    <th class="px-4 py-2 border">Value</th>
+                    <th class="px-4 py-2 border">Weight</th>
+                    <th class="px-4 py-2 border">Included</th>
                 </tr>
             </thead>
-            <tbody id="solutionTableBody">
+            <tbody id="solutionTableBody" class="text-center">
                 <!-- Table rows go here -->
             </tbody>
         </table>
     </div>
-
     <script src="script2.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
+
+</html> can you make it using raw css and both are separate generate
